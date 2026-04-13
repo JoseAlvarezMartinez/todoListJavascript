@@ -20,13 +20,6 @@ function renderTodos() {
     toDoList.innerHTML = "";
 
     todos.forEach(todo => {
-function toggleTodo(id) {
-            todos = todos.map(todo => {
-                todo.id === id ? { ...todo, completed: !todo.completed } : todo
-            })
-            renderTodos()
-        }
-
 
         const li = document.createElement("li")
         li.innerHTML = `
@@ -38,7 +31,17 @@ function toggleTodo(id) {
         toDoList.appendChild(li)
     })
 }
+ function toggleTodo(id) {
+        todos = todos.map(todo => 
+            todo.id === id ? {...todo, completed: !todo.completed} : todo)
+        
+         renderTodos()
+        }
 
+        function deleteTodo(id){
+            todos = todos.filter(todo => todo.id !== id)
+            renderTodos()
+        } 
 // Escuchar evento submit del formulario
 
 toDoForm.addEventListener("submit", e => {
