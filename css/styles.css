@@ -2,3 +2,11 @@
   font-family: "Josefin Sans", sans-serif;
 }
 
+body.light-theme{
+  background-color: hsl(0,0%,98%);
+  color:  hsl(235, 19%, 35%);
+}
+body.dark-theme{
+  background-color: hsl(235, 21%, 11%);
+  color: hsl(234, 39%, 85%);
+}
